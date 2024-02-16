@@ -41,6 +41,13 @@ const config: Config = {
           fontWeight: 600,
         },
       ],
+      "text-semibold": [
+        "15px",
+        {
+          lineHeight: "20px",
+          fontWeight: 600,
+        },
+      ],
     },
   },
   plugins: [],
