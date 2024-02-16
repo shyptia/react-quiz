@@ -1,9 +1,11 @@
 import { useRouter } from "next/router";
 import { Select } from "./shared/Select";
 import { routesPathnames } from "./routes";
+import { useLanguageStore } from "./utils/store";
 
 export function LanguagePage() {
   const router = useRouter();
+  const { setLanguage } = useLanguageStore();
 
   return (
     <div>
@@ -21,8 +23,9 @@ export function LanguagePage() {
           { label: "German", value: "de" },
           { label: "Spanish", value: "es" },
         ]}
-        onSelect={() => {
+        onSelect={(option) => {
           router.push(routesPathnames.gender);
+          setLanguage(option.label);
         }}
       />
     </div>

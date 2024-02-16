@@ -3,7 +3,7 @@ export function Select({
   onSelect,
 }: {
   options: Option[];
-  onSelect: () => void;
+  onSelect: (option: Option) => void;
 }) {
   return (
     <div className="space-y-3">
@@ -13,7 +13,7 @@ export function Select({
             className="block text-left w-full rounded-2xl text-headline-semibold px-5 py-4 bg-light-violet"
             value={option.value}
             key={option.value}
-            onClick={onSelect}
+            onClick={() => onSelect(option)}
           >
             {option.label}
           </button>
