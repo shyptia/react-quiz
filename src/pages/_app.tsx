@@ -11,7 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Quiz" key="title" />
       </Head>
 
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
