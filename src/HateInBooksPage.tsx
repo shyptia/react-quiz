@@ -1,12 +1,10 @@
-import { useRouter } from "next/router";
 import { useQuizStore } from "./utils/store";
 import { useTranslation } from "react-i18next";
 import { MultiSelect } from "./shared/MultiSelect";
-import clsx from "clsx";
 import { routesPathnames } from "./routes";
+import { NavigateButton } from "./shared/NavigateButton";
 
 export function HateInBooksPage() {
-  const router = useRouter();
   const { hateInBooks, setHateInBooks } = useQuizStore();
   const { t } = useTranslation("hate-in-books");
 
@@ -30,19 +28,12 @@ export function HateInBooksPage() {
         onValueChange={setHateInBooks}
       />
 
-      <button
+      <NavigateButton
         disabled={!hateInBooks.length}
-        className={clsx(
-          "mt-6 block w-full rounded-full py-4 text-title-semibold disabled:pointer-events-none",
-          Boolean(hateInBooks.length)
-            ? "bg-accent"
-            : "bg-disabled-accent text-grey-200"
-        )}
-        onClick={() => router.push(routesPathnames["favorite-topics"])}
-        suppressHydrationWarning
+        pathname={routesPathnames["favorite-topics"]}
       >
         {t("next")}
-      </button>
+      </NavigateButton>
     </div>
   );
 }
