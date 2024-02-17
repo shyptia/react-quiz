@@ -1,8 +1,11 @@
 import { usePathname } from "next/navigation";
 import { routes, routesPathnames } from "./routes";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 export function ProgressBar() {
   const pathname = usePathname();
+  const router = useRouter();
 
   if (pathname === routesPathnames.email) return null;
 
@@ -12,8 +15,20 @@ export function ProgressBar() {
 
   return (
     <div>
-      <div className="py-[15px] text-[18px] font-extrabold leading-5 text-center">
-        <span className="text-accent">{questionNumber}</span> / 5
+      <div className="flex">
+        {pathname !== routesPathnames.language && (
+          <Image
+            width={15}
+            height={20}
+            src="/svg/back-icon.svg"
+            alt="back-icon"
+            onClick={() => router.back()}
+          />
+        )}
+
+        <div className="flex-1 py-[15px] text-[18px] font-extrabold leading-5 text-center">
+          <span className="text-accent">{questionNumber}</span> / 5
+        </div>
       </div>
 
       <div className="bg-grey-light h-1 rounded-full">
