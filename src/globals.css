@@ -30,3 +30,7 @@ input[type="checkbox"]:checked::before {
   content:'✓';
   display: block;
 }
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}

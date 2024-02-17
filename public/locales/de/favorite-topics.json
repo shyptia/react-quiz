@@ -1,5 +1,12 @@
 {
   "header": "Was sind deine Lieblingsthemen?",
   "description": "Wähle bis zu 3 Themen aus, die du magst",
+  "werewolf": "Werwolf",
+  "romance": "Romantik",
+  "action": "Action",
+  "youngAdult": "Jugendbuch",
+  "royalObsession": "Königliche Besessenheit",
+  "badBoy": "Schlechter Junge",
+  "billionaire": "Milliardär",
   "next": "Nächster"
 }

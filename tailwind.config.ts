@@ -66,6 +66,13 @@ const config: Config = {
           fontWeight: 800,
         },
       ],
+      "caption-1": [
+        "13px",
+        {
+          lineHeight: "16px",
+          fontWeight: 600,
+        },
+      ],
     },
   },
   plugins: [],

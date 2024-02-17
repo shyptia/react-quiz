@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { ProgressBar } from "./ProgressBar";
-
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <>

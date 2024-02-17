@@ -1,5 +1,12 @@
 {
   "header": "Quels sont vos sujets préférés?",
   "description": "Choisissez jusqu'à 3 sujets que vous aimez",
+  "werewolf": "Loup-garou",
+  "romance": "Romance",
+  "action": "Action",
+  "youngAdult": "Jeunes Adultes",
+  "royalObsession": "Obsession Royale",
+  "badBoy": "Mauvais Garçon",
+  "billionaire": "Milliardaire",
   "next": "Suivant"
 }

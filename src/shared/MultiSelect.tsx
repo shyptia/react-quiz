@@ -27,7 +27,7 @@ export function MultiSelect({
           <input
             checked={value.includes(option.value)}
             type="checkbox"
-            className="w-5 h-5 border-1 block rounded-[8px] bg-white checked:bg-accent"
+            className="w-5 h-5 border-1 block rounded-[8px] checked:bg-accent"
             onChange={() => {
               const newValue = value.includes(option.value)
                 ? value.filter((item) => item !== option.value)
