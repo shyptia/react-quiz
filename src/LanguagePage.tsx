@@ -24,7 +24,9 @@ export function LanguagePage() {
           { label: "Spanish", value: "es" },
         ]}
         onSelect={(option) => {
-          router.push(routesPathnames.gender);
+          router.push(routesPathnames.gender, routesPathnames.gender, {
+            locale: option.value,
+          });
           setLanguage(option.label);
         }}
       />

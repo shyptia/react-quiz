@@ -1,0 +1,7 @@
+{
+  "header": "What gender do you identify with?",
+  "description": "Please share how do you identify yourself",
+  "female": "Female",
+  "male": "Male",
+  "other": "Other"
+}
