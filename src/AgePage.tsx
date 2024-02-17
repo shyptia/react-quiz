@@ -39,6 +39,7 @@ export function AgePage() {
           },
         ]}
         onSelect={(option) => {
+          router.push(routesPathnames["hate-in-books"]);
           setAge(option.value);
         }}
       />

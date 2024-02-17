@@ -1,0 +1,14 @@
+import { GenderPage } from "@/GenderPage";
+import { HateInBooksPage } from "@/HateInBooksPage";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["hate-in-books"])),
+    },
+  };
+}
+export default function Page() {
+  return <HateInBooksPage />;
+}

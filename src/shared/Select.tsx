@@ -21,7 +21,7 @@ export function Select({
         return (
           <button
             className={clsx(
-              "block w-full rounded-2xl bg-light-violet",
+              "block w-full rounded-2xl bg-violet-light",
               selectType === "single-select" &&
                 "text-left text-headline-semibold px-5 py-4",
               selectType === "single-select-image" &&

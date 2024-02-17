@@ -7,7 +7,7 @@ export default function Document() {
         <title>Quiz</title>
         <meta property="og:title" content="Quiz" key="title" />
       </Head>
-      <body className="bg-violet">
+      <body className="bg-violet-main">
         <Main />
         <NextScript />
       </body>

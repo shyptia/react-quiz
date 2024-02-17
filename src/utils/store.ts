@@ -5,9 +5,11 @@ type QuizState = {
   language: string;
   gender: string;
   age: string;
+  hateInBooks: string[];
   setLanguage: (role: string) => void;
   setGender: (gender: string) => void;
   setAge: (age: string) => void;
+  setHateInBooks: (value: string[]) => void;
 };
 
 export const useQuizStore = create<QuizState>()(
@@ -16,9 +18,11 @@ export const useQuizStore = create<QuizState>()(
       language: '',
       gender: '',
       age: '',
-      setLanguage: (language: string) => set({ language }),
-      setGender: (gender: string) => set({gender}),
-      setAge: (age: string) => set({age})
+      hateInBooks: [],
+      setLanguage: (language) => set({ language }),
+      setGender: (gender) => set({gender}),
+      setAge: (age) => set({age}),
+      setHateInBooks: (value) => set({hateInBooks: value}),
     }),
     {
       name: 'quizStore',

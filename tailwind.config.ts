@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        violet: '#1F002B',
-        'light-violet': '#36173D',
+        violet: {
+          main: '#1F002B',
+          light: '#36173D',
+          dark: '#6D4376',
+        },
         accent: '#E4229C',
+        "disabled-accent": "#8A155F",
         grey: {
           light: '#E8EAF2',
           40: '#F2F3F5',
@@ -46,6 +50,20 @@ const config: Config = {
         {
           lineHeight: "20px",
           fontWeight: 600,
+        },
+      ],
+      "title": [
+        "17px",
+        {
+          lineHeight: "24px",
+          fontWeight: 500,
+        },
+      ],
+      "title-semibold": [
+        "17px",
+        {
+          lineHeight: "24px",
+          fontWeight: 800,
         },
       ],
     },

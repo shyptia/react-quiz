@@ -13,3 +13,20 @@
   color: white;
   font-family: "Nunito Sans", sans-serif;
 }
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #E4229C;
+  background-color: #6D4376;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"]:checked::before {
+  content:'✓';
+  display: block;
+}
