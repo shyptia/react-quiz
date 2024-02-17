@@ -5,7 +5,8 @@ import { useQuizStore } from "./utils/store";
 
 export function LanguagePage() {
   const router = useRouter();
-  const { setLanguage } = useQuizStore();
+  const { setLanguage, setFavoriteTopics, setHateInBooks, setGender } =
+    useQuizStore();
 
   return (
     <div>
@@ -24,10 +25,13 @@ export function LanguagePage() {
           { label: "Spanish", value: "es" },
         ]}
         onSelect={(option) => {
+          setLanguage(option.label);
+          setGender("");
+          setFavoriteTopics([]);
+          setHateInBooks([]);
           router.push(routesPathnames.gender, routesPathnames.gender, {
             locale: option.value,
           });
-          setLanguage(option.label);
         }}
       />
     </div>
