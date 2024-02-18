@@ -73,6 +73,13 @@ const config: Config = {
           fontWeight: 600,
         },
       ],
+      "percent": [
+        "52px",
+        {
+          lineHeight: "62px",
+          fontWeight: 800,
+        },
+      ],
     },
   },
   plugins: [],
