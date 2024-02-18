@@ -1,4 +1,4 @@
-import { GenderPage } from "@/GenderPage";
+import { GenderPage } from "@/features/GenderPage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }: { locale: string }) {

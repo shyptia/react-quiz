@@ -1,8 +1,8 @@
-import { useQuizStore } from "./utils/store";
+import { useQuizStore } from "../utils/store";
 import { useTranslation } from "react-i18next";
-import { MultiSelect } from "./shared/MultiSelect";
-import { routesPathnames } from "./routes";
-import { NavigateButton } from "./shared/NavigateButton";
+import { MultiSelect } from "../shared/MultiSelect";
+import { routesPathnames } from "../routes";
+import { NavigateButton } from "../shared/NavigateButton";
 
 export function HateInBooksPage() {
   const { hateInBooks, setHateInBooks } = useQuizStore();

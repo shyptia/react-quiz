@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
-import { useQuizStore } from "./utils/store";
+import { useQuizStore } from "../utils/store";
 import { useTranslation } from "react-i18next";
-import { Select } from "./shared/Select";
-import { routesPathnames } from "./routes";
+import { Select } from "../shared/Select";
+import { routesPathnames } from "../routes";
 
 export function AgePage() {
   const router = useRouter();

@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { useQuizStore } from "./utils/store";
-import { routesPathnames } from "./routes";
-import { NavigateButton } from "./shared/NavigateButton";
-import { BubbleSelect } from "./shared/BubbleSelect";
+import { useQuizStore } from "../utils/store";
+import { routesPathnames } from "../routes";
+import { NavigateButton } from "../shared/NavigateButton";
+import { BubbleSelect } from "../shared/BubbleSelect";
 
 export function FavoriteTopicsPage() {
   const { favoriteTopics, setFavoriteTopics } = useQuizStore();

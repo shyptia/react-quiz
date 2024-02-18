@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import { Select } from "./shared/Select";
-import { routesPathnames } from "./routes";
-import { useQuizStore } from "./utils/store";
+import { Select } from "../shared/Select";
+import { routesPathnames } from "../routes";
+import { useQuizStore } from "../utils/store";
 
 export function LanguagePage() {
   const router = useRouter();

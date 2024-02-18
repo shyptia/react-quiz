@@ -1,4 +1,4 @@
-import { FavoriteTopicsPage } from "@/FavoriteTopicsPage";
+import { FavoriteTopicsPage } from "@/features/FavoriteTopicsPage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }: { locale: string }) {

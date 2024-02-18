@@ -1,4 +1,4 @@
-import { HateInBooksPage } from "@/HateInBooksPage";
+import { HateInBooksPage } from "@/features/HateInBooksPage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }: { locale: string }) {

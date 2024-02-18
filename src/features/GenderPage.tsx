@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import { Select } from "./shared/Select";
-import { useQuizStore } from "./utils/store";
-import { routesPathnames } from "./routes";
+import { Select } from "../shared/Select";
+import { useQuizStore } from "../utils/store";
+import { routesPathnames } from "../routes";
 import { useTranslation } from "next-i18next";
 
 export function GenderPage() {
