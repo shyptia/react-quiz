@@ -12,7 +12,7 @@ export function CircleProgressBar({ progress }: { progress: number }) {
           r="110"
         />
         <circle
-          className="fill-transparent stroke-accent stroke-[12px] transform origin-center -rotate-90"
+          className="fill-transparent stroke-accent-main stroke-[12px] transform origin-center -rotate-90"
           cx="120"
           cy="120"
           r="110"

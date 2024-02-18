@@ -31,13 +31,13 @@ export function ProgressBar() {
         )}
 
         <div className="flex-1 py-[15px] text-[18px] font-extrabold leading-5 text-center">
-          <span className="text-accent">{questionNumber}</span> / 5
+          <span className="text-accent-main">{questionNumber}</span> / 5
         </div>
       </div>
 
       <div className="bg-grey-light h-1 rounded-full">
         <div
-          className="bg-accent h-full rounded-full"
+          className="bg-accent-main h-full rounded-full"
           style={{ width: `${widthPercentage}%` }}
         />
       </div>

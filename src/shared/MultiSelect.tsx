@@ -16,7 +16,7 @@ export function MultiSelect({
           className={clsx(
             "block flex items-center justify-between p-6 bg-violet-light rounded-[16px] border-2",
             value.includes(option.value)
-              ? "border-accent"
+              ? "border-accent-main"
               : "border-transparent"
           )}
           key={option.value}
@@ -27,7 +27,7 @@ export function MultiSelect({
           <input
             checked={value.includes(option.value)}
             type="checkbox"
-            className="w-5 h-5 border-1 block rounded-[8px] checked:bg-accent"
+            className="w-5 h-5 border-1 block rounded-[8px] checked:bg-accent-main"
             onChange={() => {
               const newValue = value.includes(option.value)
                 ? value.filter((item) => item !== option.value)

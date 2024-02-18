@@ -50,7 +50,7 @@ export function EmailForm() {
           onChange={(event) => setEmail(event.target.value)}
           suppressHydrationWarning
           className={clsx(
-            "w-full bg-violet-dark outline-none pl-5 py-6 text-title rounded-[16px] placeholder:text-grey-200 border-2 focus:border-accent",
+            "w-full bg-violet-dark outline-none pl-5 py-6 text-title rounded-[16px] placeholder:text-grey-200 border-2 focus:border-accent-main",
             !emailIsValid ? "border-red focus:border-red" : "border-transparent"
           )}
         />

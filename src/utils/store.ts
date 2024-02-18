@@ -14,6 +14,7 @@ type QuizState = {
   setHateInBooks: (value: string[]) => void;
   setFavoriteTopics: (value: string[]) => void;
   setEmail: (email: string) => void;
+  resetStore: () => void;
 };
 
 export const useQuizStore = create<QuizState>()(
@@ -31,6 +32,13 @@ export const useQuizStore = create<QuizState>()(
       setHateInBooks: (value) => set({hateInBooks: value}),
       setFavoriteTopics: (value) => set({favoriteTopics: value}),
       setEmail: (email) => set({email}),
+      resetStore: () => set({
+        language: '',
+        gender: '', age: '',
+        hateInBooks: [],
+        favoriteTopics: [],
+        email: '' ,
+      }),
     }),
     {
       name: 'quizStore',

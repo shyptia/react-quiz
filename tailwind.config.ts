@@ -10,18 +10,24 @@ const config: Config = {
     extend: {
       colors: {
         violet: {
-          main: '#1F002B',
-          light: '#36173D',
-          dark: '#6D4376',
+          main: "#1F002B",
+          light: "#36173D",
+          dark: "#6D4376",
         },
-        accent: '#E4229C',
-        "disabled-accent": "#8A155F",
+        accent: {
+          main: "#E4229C",
+          disabled: "#8A155F",
+        },
         grey: {
-          light: '#E8EAF2',
-          40: '#F2F3F5',
-          200: '#C4C8CC'
+          light: "#E8EAF2",
+          40: "#F2F3F5",
+          200: "#C4C8CC"
         },
         red: "#B91C1C",
+        green: {
+          light: "#C8E6C9",
+          dark: "#4CAF51",
+        },
       }
     },
     fontSize: {
@@ -81,6 +87,9 @@ const config: Config = {
           fontWeight: 800,
         },
       ],
+    },
+    fontFamily: {
+      "niconne": ["Niconne", "cursive"],
     },
   },
   plugins: [],

@@ -20,7 +20,7 @@ export function BubbleSelect({
             "w-[100px] h-[100px] bg-violet-light rounded-full border-2 flex flex-col items-center justify-center",
             index % 4 === 2 && "mt-10",
             value.includes(option.value)
-              ? "border-accent"
+              ? "border-accent-main"
               : "border-transparent"
           )}
           onClick={() => {
