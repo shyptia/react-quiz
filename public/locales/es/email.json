@@ -1,3 +1,9 @@
 {
-  "loading": "Buscando colecciones para ti..."
+  "loading": "Buscando colecciones para ti...",
+  "email": "Correo electrónico",
+  "description": "Ingresa tu correo electrónico para obtener acceso completo",
+  "placeholder": "Tu correo electrónico",
+  "errorMessage": "Correo electrónico no válido",
+  "agreement": "Al continuar, acepto la política de privacidad y los términos de uso.",
+  "next": "Siguiente"
 }

@@ -20,7 +20,8 @@ const config: Config = {
           light: '#E8EAF2',
           40: '#F2F3F5',
           200: '#C4C8CC'
-        }
+        },
+        red: "#B91C1C",
       }
     },
     fontSize: {

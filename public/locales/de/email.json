@@ -1,3 +1,9 @@
 {
-  "loading": "Sammlungen für Sie finden..."
+  "loading": "Sammlungen für Sie finden...",
+  "email": "E-Mail",
+  "description": "Gib deine E-Mail ein, um vollen Zugriff zu erhalten",
+  "placeholder": "Deine E-Mail",
+  "errorMessage": "Ungültige E-Mail",
+  "agreement": "Indem ich fortfahre, stimme ich der Datenschutzrichtlinie und den Nutzungsbedingungen zu.",
+  "next": "Weiter"
 }

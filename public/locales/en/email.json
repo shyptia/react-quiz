@@ -1,3 +1,9 @@
 {
-  "loading": "Finding collections for you..."
+  "loading": "Finding collections for you...",
+  "email": "Email",
+  "description": "Enter your email to get full access",
+  "placeholder": "Your email",
+  "errorMessage": "Invalid email",
+  "agreement": "By continuing I agree with Privacy policy and Terms of use.",
+  "next": "Next"
 }

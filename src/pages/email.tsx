@@ -1,4 +1,4 @@
-import { EmailPage } from "@/EmailPage";
+import { EmailPage } from "@/email-page/EmailPage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }: { locale: string }) {

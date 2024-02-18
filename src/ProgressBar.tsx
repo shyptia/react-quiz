@@ -7,7 +7,11 @@ export function ProgressBar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  if (pathname === routesPathnames.email) return null;
+  if (
+    pathname === routesPathnames.email ||
+    pathname === routesPathnames["thank-you"]
+  )
+    return null;
 
   const questionNumber =
     routes.findIndex((route) => route === pathname.slice(1)) + 1;

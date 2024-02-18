@@ -1,3 +1,9 @@
 {
-  "loading": "Recherche des collections pour vous..."
+  "loading": "Recherche des collections pour vous...",
+  "email": "E-mail",
+  "description": "Entrez votre e-mail pour accéder pleinement",
+  "placeholder": "Votre e-mail",
+  "errorMessage": "E-mail invalide",
+  "agreement": "En continuant, j'accepte la politique de confidentialité et les conditions d'utilisation.",
+  "next": "Suivant"
 }
