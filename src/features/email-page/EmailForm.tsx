@@ -2,6 +2,7 @@ import { routesPathnames } from "@/routes";
 import { NavigateButton } from "@/shared/NavigateButton";
 import { useQuizStore } from "@/utils/store";
 import clsx from "clsx";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,6 +13,7 @@ export function EmailForm() {
   const [emailIsValid, setEmailIsValid] = useState(true);
   const { t } = useTranslation("email");
   const { setEmail: setEmailToLocalStorage } = useQuizStore();
+  const router = useRouter();
 
   useEffect(() => {
     if (!email) {
@@ -69,8 +71,10 @@ export function EmailForm() {
 
       <NavigateButton
         disabled={!emailIsValid || !email}
-        pathname={routesPathnames["thank-you"]}
-        onClick={() => setEmailToLocalStorage(email)}
+        onClick={() => {
+          setEmailToLocalStorage(email);
+          router.push(routesPathnames["thank-you"]);
+        }}
       >
         {t("next")}
       </NavigateButton>

@@ -3,10 +3,12 @@ import { useQuizStore } from "../utils/store";
 import { routesPathnames } from "../routes";
 import { NavigateButton } from "../shared/NavigateButton";
 import { BubbleSelect } from "../shared/BubbleSelect";
+import { useRouter } from "next/router";
 
 export function FavoriteTopicsPage() {
   const { favoriteTopics, setFavoriteTopics } = useQuizStore();
   const { t } = useTranslation("favorite-topics");
+  const router = useRouter();
 
   return (
     <div>
@@ -40,7 +42,7 @@ export function FavoriteTopicsPage() {
 
       <NavigateButton
         disabled={!favoriteTopics.length}
-        pathname={routesPathnames.email}
+        onClick={() => router.push(routesPathnames.email)}
       >
         {t("next")}
       </NavigateButton>

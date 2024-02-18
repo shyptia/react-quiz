@@ -3,10 +3,12 @@ import { useTranslation } from "react-i18next";
 import { MultiSelect } from "../shared/MultiSelect";
 import { routesPathnames } from "../routes";
 import { NavigateButton } from "../shared/NavigateButton";
+import { useRouter } from "next/navigation";
 
 export function HateInBooksPage() {
   const { hateInBooks, setHateInBooks } = useQuizStore();
   const { t } = useTranslation("hate-in-books");
+  const router = useRouter();
 
   return (
     <div>
@@ -30,7 +32,7 @@ export function HateInBooksPage() {
 
       <NavigateButton
         disabled={!hateInBooks.length}
-        pathname={routesPathnames["favorite-topics"]}
+        onClick={() => router.push(routesPathnames["favorite-topics"])}
       >
         {t("next")}
       </NavigateButton>

@@ -5,7 +5,7 @@ import { useQuizStore } from "../utils/store";
 
 export function LanguagePage() {
   const router = useRouter();
-  const { setLanguage, setFavoriteTopics, setHateInBooks, setGender } =
+  const { setLanguage, setFavoriteTopics, setHateInBooks, setGender, setAge } =
     useQuizStore();
 
   return (
@@ -27,6 +27,7 @@ export function LanguagePage() {
         onSelect={(option) => {
           setLanguage(option.label);
           setGender("");
+          setAge("");
           setFavoriteTopics([]);
           setHateInBooks([]);
           router.push(routesPathnames.gender, routesPathnames.gender, {

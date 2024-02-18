@@ -4,10 +4,12 @@ import { useQuizStore } from "@/utils/store";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { DownloadAnswersButton } from "./DownloadAnswersButton";
+import { useRouter } from "next/router";
 
 export function ThankYouPage() {
   const { t } = useTranslation("thank-you");
   const { resetStore } = useQuizStore();
+  const router = useRouter();
 
   return (
     <div className="flex flex-col items-center">
@@ -38,8 +40,12 @@ export function ThankYouPage() {
       <DownloadAnswersButton />
 
       <NavigateButton
-        pathname={routesPathnames.language}
-        onClick={() => resetStore()}
+        onClick={() => {
+          resetStore();
+          router.push(routesPathnames.language, routesPathnames.language, {
+            locale: "en",
+          });
+        }}
       >
         {t("navigationText")}
       </NavigateButton>
