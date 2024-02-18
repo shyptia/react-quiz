@@ -1,0 +1,13 @@
+{
+  "downloadFile": "Laden Sie meine Antworten herunter",
+  "order": "Reihenfolge",
+  "title": "Titel",
+  "type": "Typ",
+  "answer": "Antwort",
+  "language": "Was ist Ihre bevorzugte Sprache?",
+  "gender": "Mit welchem Geschlecht identifizieren Sie sich?",
+  "age": "Wie alt sind Sie?",
+  "hateInBooks": "Was hassen Sie am meisten in einem Buch?",
+  "favoriteTopics": "Was sind Ihre Lieblingsthemen?",
+  "email": "Email"
+}

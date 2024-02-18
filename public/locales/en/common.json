@@ -1,0 +1,13 @@
+{
+  "downloadFile": "Download my answers",
+  "order": "Order",
+  "title": "Title",
+  "type": "Type",
+  "answer": "Answer",
+  "language": "What is your preferred language?",
+  "gender": "What gender do you identify with?",
+  "age": "What is you age?",
+  "hateInBooks": "What do you hate the most in a book?",
+  "favoriteTopics": "What are your favorite topics?",
+  "email": "Email"
+}

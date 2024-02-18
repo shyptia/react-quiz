@@ -3,6 +3,7 @@ import { NavigateButton } from "@/shared/NavigateButton";
 import { useQuizStore } from "@/utils/store";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { DownloadAnswersButton } from "./DownloadAnswersButton";
 
 export function ThankYouPage() {
   const { t } = useTranslation("thank-you");
@@ -34,16 +35,7 @@ export function ThankYouPage() {
         />
       </div>
 
-      <div className="flex gap-1 items-center mt-[142px]">
-        <Image
-          width={42}
-          height={42}
-          src="/svg/download-icon.svg"
-          alt="checked icon"
-          className="fill-green-dark"
-        />
-        <span suppressHydrationWarning>{t("downloadFile")}</span>
-      </div>
+      <DownloadAnswersButton />
 
       <NavigateButton
         pathname={routesPathnames.language}
