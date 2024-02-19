@@ -8,6 +8,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
     },
   };
 }
+
 export default function Page() {
   return <GenderPage />;
 }

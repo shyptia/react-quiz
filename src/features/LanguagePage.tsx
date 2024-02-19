@@ -2,11 +2,12 @@ import { useRouter } from "next/router";
 import { Select } from "../shared/Select";
 import { routesPathnames } from "../routes";
 import { useQuizStore } from "../utils/store";
+import { useTranslation } from "react-i18next";
 
 export function LanguagePage() {
   const router = useRouter();
-  const { setLanguage, setFavoriteTopics, setHateInBooks, setGender, setAge } =
-    useQuizStore();
+  const { changeLanguage } = useQuizStore();
+  const { i18n } = useTranslation();
 
   return (
     <div>
@@ -25,14 +26,11 @@ export function LanguagePage() {
           { label: "Spanish", value: "es" },
         ]}
         onSelect={(option) => {
-          setLanguage(option.label);
-          setGender("");
-          setAge("");
-          setFavoriteTopics([]);
-          setHateInBooks([]);
+          changeLanguage(option.label);
           router.push(routesPathnames.gender, routesPathnames.gender, {
             locale: option.value,
           });
+          i18n.changeLanguage(option.value);
         }}
       />
     </div>
