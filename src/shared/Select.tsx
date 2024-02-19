@@ -48,5 +48,5 @@ export function Select({
   );
 }
 
-export type Option = { value: string; label: string; image?: string };
-export type SelectType = "single-select" | "single-select-image";
+type Option = { value: string; label: string; image?: string };
+type SelectType = "single-select" | "single-select-image";

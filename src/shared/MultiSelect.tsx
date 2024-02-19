@@ -42,4 +42,4 @@ export function MultiSelect({
   );
 }
 
-export type Option = { value: string };
+type Option = { value: string };

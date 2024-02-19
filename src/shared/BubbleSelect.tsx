@@ -46,4 +46,4 @@ export function BubbleSelect({
   );
 }
 
-export type Option = { value: string; emoji: string };
+type Option = { value: string; emoji: string };
