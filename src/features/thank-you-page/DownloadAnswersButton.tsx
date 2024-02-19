@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { CSVLink } from "react-csv";
-import { useQuizStore } from "@/utils/store";
+import { useQuizStore } from "@/utils";
 
 export function DownloadAnswersButton() {
   const { t } = useTranslation("common");

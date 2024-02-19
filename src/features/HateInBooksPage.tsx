@@ -1,14 +1,19 @@
-import { useQuizStore } from "../utils/store";
 import { useTranslation } from "react-i18next";
 import { MultiSelect } from "../shared/MultiSelect";
 import { routesPathnames } from "../routes";
 import { NavigateButton } from "../shared/NavigateButton";
 import { useRouter } from "next/navigation";
+import { useDataStore, useQuizStore } from "@/utils";
 
 export function HateInBooksPage() {
   const { hateInBooks, setHateInBooks } = useQuizStore();
   const { t } = useTranslation("hate-in-books");
   const router = useRouter();
+  const { hateInBooksOptions } = useDataStore();
+
+  const translatedHateInBooksOptions = hateInBooksOptions.map(
+    ({ valueKey }) => ({ value: t(valueKey) })
+  );
 
   return (
     <div className="px-5 pt-11 pb-5">
@@ -20,12 +25,7 @@ export function HateInBooksPage() {
       </h1>
 
       <MultiSelect
-        options={[
-          { value: t("lackLogic") },
-          { value: t("slowSpeed") },
-          { value: t("lackHumor") },
-          { value: t("tooGenericEnding") },
-        ]}
+        options={translatedHateInBooksOptions}
         value={hateInBooks}
         onValueChange={setHateInBooks}
       />

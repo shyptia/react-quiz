@@ -1,13 +1,20 @@
 import { useRouter } from "next/router";
 import { Select } from "../shared/Select";
-import { useQuizStore } from "../utils/store";
 import { routesPathnames } from "../routes";
 import { useTranslation } from "next-i18next";
+import { useDataStore, useQuizStore } from "@/utils";
 
 export function GenderPage() {
   const router = useRouter();
   const { setGender } = useQuizStore();
   const { t } = useTranslation("gender");
+  const { genderOptions } = useDataStore();
+
+  const translatedGenderOptions = genderOptions.map(({valueKey, image}) => ({
+    label: t(valueKey),
+    value: valueKey,
+    image: image,
+  }));
 
   return (
     <div className="px-6 py-11">
@@ -19,23 +26,7 @@ export function GenderPage() {
       </p>
 
       <Select
-        options={[
-          {
-            label: t("female"),
-            value: "female",
-            image: "/images/female-gender.png",
-          },
-          {
-            label: t("male"),
-            value: "male",
-            image: "/images/male-gender.png",
-          },
-          {
-            label: t("other"),
-            value: "other",
-            image: "/images/other-gender.png",
-          },
-        ]}
+        options={translatedGenderOptions}
         selectType="single-select-image"
         onSelect={(option) => {
           router.push(routesPathnames.age);

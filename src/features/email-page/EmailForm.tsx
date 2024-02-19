@@ -1,6 +1,6 @@
 import { routesPathnames } from "@/routes";
 import { NavigateButton } from "@/shared/NavigateButton";
-import { useQuizStore } from "@/utils/store";
+import { useQuizStore } from "@/utils";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";

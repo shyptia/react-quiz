@@ -1,10 +1,10 @@
 import { routesPathnames } from "@/routes";
 import { NavigateButton } from "@/shared/NavigateButton";
-import { useQuizStore } from "@/utils/store";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { DownloadAnswersButton } from "./DownloadAnswersButton";
 import { useRouter } from "next/router";
+import { useQuizStore } from "@/utils";
 
 export function ThankYouPage() {
   const { t } = useTranslation("thank-you");

@@ -1,4 +1,4 @@
 {
   "header": "Quel âge as-tu?",
-  "years": "ans"
+  "years": "{{age}} ans"
 }

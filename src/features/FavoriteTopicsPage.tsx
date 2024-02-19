@@ -1,14 +1,19 @@
 import { useTranslation } from "react-i18next";
-import { useQuizStore } from "../utils/store";
 import { routesPathnames } from "../routes";
 import { NavigateButton } from "../shared/NavigateButton";
 import { BubbleSelect } from "../shared/BubbleSelect";
 import { useRouter } from "next/router";
+import { useDataStore, useQuizStore } from "@/utils";
 
 export function FavoriteTopicsPage() {
   const { favoriteTopics, setFavoriteTopics } = useQuizStore();
   const { t } = useTranslation("favorite-topics");
   const router = useRouter();
+  const { favoriteTopicsOptions } = useDataStore();
+
+  const translatedTopicsOptions = favoriteTopicsOptions.map(
+    ({ valueKey, emoji }) => ({ value: t(valueKey), emoji })
+  );
 
   return (
     <div className="pt-11 pb-5 px-5">
@@ -27,15 +32,7 @@ export function FavoriteTopicsPage() {
       </p>
 
       <BubbleSelect
-        options={[
-          { value: t("werewolf"), emoji: "0x1F43A" },
-          { value: t("romance"), emoji: "0x1F970" },
-          { value: t("action"), emoji: "0x1F483	" },
-          { value: t("youngAdult"), emoji: "0x1F481" },
-          { value: t("royalObsession"), emoji: "0x1F451" },
-          { value: t("badBoy"), emoji: "0x1F920" },
-          { value: t("billionaire"), emoji: "0x1F911" },
-        ]}
+        options={translatedTopicsOptions}
         value={favoriteTopics}
         onValueChange={setFavoriteTopics}
       />

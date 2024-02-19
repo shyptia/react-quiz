@@ -1,14 +1,19 @@
 import { useRouter } from "next/router";
-import { useQuizStore } from "../utils/store";
 import { useTranslation } from "react-i18next";
 import { Select } from "../shared/Select";
 import { routesPathnames } from "../routes";
+import { useDataStore, useQuizStore } from "@/utils";
 
 export function AgePage() {
   const router = useRouter();
   const { setAge } = useQuizStore();
   const { t } = useTranslation("age");
-  const translatedYears = t("years");
+  const { ageOptions } = useDataStore();
+
+  const translatedAgeOptions = ageOptions.map(({ value }) => ({
+    label: t("years", { age: value }),
+    value: t("years", { age: value }),
+  }));
 
   return (
     <div className="px-5 py-11">
@@ -20,24 +25,7 @@ export function AgePage() {
       </h1>
 
       <Select
-        options={[
-          {
-            label: `18-29 ${translatedYears}`,
-            value: `18-29 ${translatedYears}`,
-          },
-          {
-            label: `30-39 ${translatedYears}`,
-            value: `30-39 ${translatedYears}`,
-          },
-          {
-            label: `40-49 ${translatedYears}`,
-            value: `40-49 ${translatedYears}`,
-          },
-          {
-            label: "50+",
-            value: "50+",
-          },
-        ]}
+        options={translatedAgeOptions}
         onSelect={(option) => {
           router.push(routesPathnames["hate-in-books"]);
           setAge(option.value);

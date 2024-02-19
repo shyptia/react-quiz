@@ -1,13 +1,14 @@
 import { useRouter } from "next/router";
 import { Select } from "../shared/Select";
 import { routesPathnames } from "../routes";
-import { useQuizStore } from "../utils/store";
 import { useTranslation } from "react-i18next";
+import { useDataStore, useQuizStore } from "@/utils";
 
 export function LanguagePage() {
   const router = useRouter();
   const { changeLanguage } = useQuizStore();
   const { i18n } = useTranslation();
+  const { languageOptions } = useDataStore();
 
   return (
     <div className="px-6 py-11">
@@ -21,12 +22,7 @@ export function LanguagePage() {
       </p>
 
       <Select
-        options={[
-          { label: "English", value: "en" },
-          { label: "French", value: "fr" },
-          { label: "German", value: "de" },
-          { label: "Spanish", value: "es" },
-        ]}
+        options={languageOptions}
         onSelect={(option) => {
           changeLanguage(option.label);
           router.push(routesPathnames.gender, routesPathnames.gender, {
