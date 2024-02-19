@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { Select } from "../shared/Select";
 import { routesPathnames } from "../routes";
 import { useDataStore, useQuizStore } from "@/utils";
@@ -18,9 +18,7 @@ export function AgePage() {
   return (
     <div className="px-5 py-11">
       <h1
-        className="text-title-3 text-center mb-4 text-grey-40 mb-6"
-        suppressHydrationWarning
-      >
+        className="text-title-3 text-center mb-4 text-grey-40 mb-6">
         {t("header")}
       </h1>
 

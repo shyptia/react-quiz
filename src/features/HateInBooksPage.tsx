@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { MultiSelect } from "../shared/MultiSelect";
 import { routesPathnames } from "../routes";
 import { NavigateButton } from "../shared/NavigateButton";
@@ -17,10 +17,7 @@ export function HateInBooksPage() {
 
   return (
     <div className="px-5 pt-11 pb-5">
-      <h1
-        className="text-title-3 text-center mb-4 text-grey-40 mb-4"
-        suppressHydrationWarning
-      >
+      <h1 className="text-title-3 text-center mb-4 text-grey-40 mb-4">
         {t("header")}
       </h1>
 

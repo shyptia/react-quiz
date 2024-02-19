@@ -30,7 +30,6 @@ export function Select({
             value={option.value}
             key={option.value}
             onClick={() => onSelect(option)}
-            suppressHydrationWarning
           >
             {selectType === "single-select-image" && option.image && (
               <Image

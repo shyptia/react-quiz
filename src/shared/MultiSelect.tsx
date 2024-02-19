@@ -21,9 +21,7 @@ export function MultiSelect({
           )}
           key={option.value}
         >
-          <span className="text-title" suppressHydrationWarning>
-            {option.value}
-          </span>
+          <span className="text-title">{option.value}</span>
           <input
             checked={value.includes(option.value)}
             type="checkbox"

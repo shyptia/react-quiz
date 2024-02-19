@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { Select } from "../shared/Select";
 import { routesPathnames } from "../routes";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { useDataStore, useQuizStore } from "@/utils";
 
 export function LanguagePage() {

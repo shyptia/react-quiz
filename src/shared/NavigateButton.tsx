@@ -18,7 +18,6 @@ export function NavigateButton({
         disabled ? "bg-accent-disabled text-grey-200" : "bg-accent-main"
       )}
       onClick={onClick}
-      suppressHydrationWarning
     >
       {children}
     </button>

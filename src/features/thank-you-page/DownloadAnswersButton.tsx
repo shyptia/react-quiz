@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { CSVLink } from "react-csv";
 import { useQuizStore } from "@/utils";
 
@@ -51,6 +51,7 @@ export function DownloadAnswersButton() {
       filename={"my-answers.csv"}
       className="btn btn-primary"
       target="_blank"
+      suppressHydrationWarning
     >
       <div className="flex gap-1 items-center mt-[100px]">
         <Image
@@ -60,7 +61,7 @@ export function DownloadAnswersButton() {
           alt="checked icon"
           className="fill-green-dark"
         />
-        <span suppressHydrationWarning>{t("downloadFile")}</span>
+        <span>{t("downloadFile")}</span>
       </div>
     </CSVLink>
   );

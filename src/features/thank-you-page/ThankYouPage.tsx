@@ -1,7 +1,7 @@
 import { routesPathnames } from "@/routes";
 import { NavigateButton } from "@/shared/NavigateButton";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { DownloadAnswersButton } from "./DownloadAnswersButton";
 import { useRouter } from "next/router";
 import { useQuizStore } from "@/utils";
@@ -14,17 +14,11 @@ export function ThankYouPage() {
   return (
     <div className="flex flex-col justify-between px-5 h-full">
       <div className="h-full flex flex-col justify-center items-center">
-        <h1
-          className="font-niconne text-title-3 text-center text-grey-40"
-          suppressHydrationWarning
-        >
+        <h1 className="font-niconne text-title-3 text-center text-grey-40">
           {t("header")}
         </h1>
 
-        <p
-          className="text-headline-regular text-center text-grey-40 mb-16"
-          suppressHydrationWarning
-        >
+        <p className="text-headline-regular text-center text-grey-40 mb-16">
           {t("description")}
         </p>
 

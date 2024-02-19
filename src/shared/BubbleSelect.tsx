@@ -32,14 +32,11 @@ export function BubbleSelect({
 
             onValueChange(newValue);
           }}
-          suppressHydrationWarning
         >
           <span className="block w-8 h-6" role="img">
             {String.fromCodePoint(parseInt(option.emoji, 16))}
           </span>
-          <div className="text-caption-1 w-[90px]" suppressHydrationWarning>
-            {option.value}
-          </div>
+          <div className="text-caption-1 w-[90px]">{option.value}</div>
         </button>
       ))}
     </div>
