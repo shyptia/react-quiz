@@ -52,7 +52,7 @@ export function DownloadAnswersButton() {
       className="btn btn-primary"
       target="_blank"
     >
-      <div className="flex gap-1 items-center mt-[142px]">
+      <div className="flex gap-1 items-center mt-[100px]">
         <Image
           width={42}
           height={42}

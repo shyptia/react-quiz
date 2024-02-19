@@ -12,32 +12,34 @@ export function ThankYouPage() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col items-center">
-      <h1
-        className="font-niconne text-title-3 text-center text-grey-40"
-        suppressHydrationWarning
-      >
-        {t("header")}
-      </h1>
+    <div className="flex flex-col justify-between px-5 h-full">
+      <div className="h-full flex flex-col justify-center items-center">
+        <h1
+          className="font-niconne text-title-3 text-center text-grey-40"
+          suppressHydrationWarning
+        >
+          {t("header")}
+        </h1>
 
-      <p
-        className="text-headline-regular text-center text-grey-40 mb-16"
-        suppressHydrationWarning
-      >
-        {t("description")}
-      </p>
+        <p
+          className="text-headline-regular text-center text-grey-40 mb-16"
+          suppressHydrationWarning
+        >
+          {t("description")}
+        </p>
 
-      <div className="w-[100px] h-[100px] bg-green-light rounded-full flex items-center justify-center">
-        <Image
-          width={70}
-          height={70}
-          src="/svg/checked-icon.svg"
-          alt="checked icon"
-          className="fill-green-dark"
-        />
+        <div className="w-[100px] h-[100px] bg-green-light rounded-full flex items-center justify-center">
+          <Image
+            width={70}
+            height={70}
+            src="/svg/checked-icon.svg"
+            alt="checked icon"
+            className="fill-green-dark"
+          />
+        </div>
+
+        <DownloadAnswersButton />
       </div>
-
-      <DownloadAnswersButton />
 
       <NavigateButton
         onClick={() => {

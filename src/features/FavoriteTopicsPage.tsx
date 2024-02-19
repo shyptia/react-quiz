@@ -11,7 +11,7 @@ export function FavoriteTopicsPage() {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="pt-11 pb-5 px-5">
       <h1
         className="text-title-3 text-center mb-4 text-grey-40 mb-4"
         suppressHydrationWarning

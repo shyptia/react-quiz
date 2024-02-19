@@ -10,9 +10,11 @@ export function LanguagePage() {
   const { i18n } = useTranslation();
 
   return (
-    <div>
+    <div className="px-6 py-11">
       <h1 className="text-title-3 text-center mb-4 text-grey-40">
-        What is your preferred language?
+        What is your
+        <br />
+        preferred language?
       </h1>
       <p className="text-headline-regular text-center text-grey-200 mb-6">
         Choose language

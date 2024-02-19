@@ -11,9 +11,9 @@ export function AgePage() {
   const translatedYears = t("years");
 
   return (
-    <div>
+    <div className="px-5 py-11">
       <h1
-        className="text-title-3 text-center mb-4 text-grey-40 mb-4"
+        className="text-title-3 text-center mb-4 text-grey-40 mb-6"
         suppressHydrationWarning
       >
         {t("header")}

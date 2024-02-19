@@ -10,7 +10,7 @@ export function GenderPage() {
   const { t } = useTranslation("gender");
 
   return (
-    <div>
+    <div className="px-6 py-11">
       <h1 className="text-title-3 text-center mb-4 text-grey-40 mb-4">
         {t("header")}
       </h1>
