@@ -1,10 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-type DataState = {
-  language: string;
-};
-
 export const useDataStore = create(
   persist(
     () => ({
